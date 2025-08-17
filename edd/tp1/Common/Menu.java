@@ -1,9 +1,7 @@
-package edd.tp1.E3;
+package edd.tp1.Common;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
-
-import edd.tp1.E2.Input;
 
 public class Menu {
   public static void showMenu(
@@ -17,11 +15,14 @@ public class Menu {
         }
         System.out.println((options.size() + 1) + ". Salir");
         Integer selectedOption = Input.ReadNumber();
+
         if (selectedOption < 1 || selectedOption > options.size() + 1) {
           System.err.println("Opcion invalida. Por favor seleccione una opcion valida.");
         } else if (selectedOption == options.size() + 1) {
           System.out.println("Saliendo del menu...");
+          Input.closeScanner();
           break;
+
         } else {
           onOptionSelected.accept(selectedOption);
         }

@@ -1,24 +1,26 @@
 package edd.tp1.E2;
 
-public class Main {
+import java.util.ArrayList;
 
+import edd.tp1.Common.Input;
+import edd.tp1.Common.Menu;
+
+public class Main {
   public static void main(String[] args) {
-    while (true) {
-      System.err.println("Calculadora de eficiencia de combustible");
-      System.out.println("Ingrese los kilometros");
-      int kilometers = Input.ReadNumber();
-      System.out.println("Ingrese el combustible gastado");
-      int fuel = Input.ReadNumber();
-      double eficiency = (double) kilometers / fuel;
-      if (eficiency >= 15) {
-        System.out.println("Eficiencia Excelente");
-      } else if (eficiency >= 10) {
-        System.out.println("Eficiencia Buena");
-      } else if (eficiency >= 5) {
-        System.out.println("Eficiencia Regular");
-      } else {
-        System.out.println("Eficiencia Baja");
+    Menu.showMenu(new ArrayList<String>() {
+      {
+        add("Dados");
       }
-    }
+    }, (_) -> {
+      System.out.println("Cuantas tiradas desea realizar?");
+      int times = Input.ReadNumber();
+      System.out.println("Tiradas: " + times);
+      for (int i = 0; i < times; i++) {
+        int result = (int) (Math.random() * 6) + 1;
+        System.out.println("Tirada " + (i + 1) + " Dado 1: " + result);
+        int result2 = (int) (Math.random() * 6) + 1;
+        System.out.println("Tirada " + (i + 1) + " Dado 2: " + result2);
+      }
+    });
   }
 }

@@ -1,4 +1,4 @@
-package edd.tp1.E2;
+package edd.tp1.Common;
 
 import java.util.Scanner;
 
@@ -12,10 +12,28 @@ public class Input {
           scanner = new Scanner(System.in);
         }
         int number = scanner.nextInt();
+        scanner.nextLine();
         return number;
 
       } catch (Exception e) {
         System.err.println("Ingrese un entero valido");
+      }
+    }
+  }
+
+  public static String ReadLine() {
+    while (true) {
+      try {
+        if (scanner == null) {
+          scanner = new Scanner(System.in);
+          System.out.println("Se genero un nuevo scanner");
+        }
+        String line = scanner.nextLine();
+        line = line.trim();
+        return line;
+
+      } catch (Exception e) {
+        System.err.println("Ingrese string valido");
       }
     }
   }
