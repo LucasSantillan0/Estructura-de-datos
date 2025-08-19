@@ -60,6 +60,31 @@ public class Main {
 
       Motorbike motorbike = new Motorbike(bikePrice, bikeBrand, bikeModel, bikeYear, displacement, bikeFuelType);
       System.out.println(motorbike.getBasicDescription());
+      System.out.println("Cilindrada: " + motorbike.getCyllinderClassification());
+      System.out.println("Ingrese el precio del camión:");
+      float truckPrice = Input.ReadNumber();
+
+      System.out.println("Ingrese la marca del camión:");
+      String truckBrand = Input.ReadLine();
+
+      System.out.println("Ingrese el modelo del camión:");
+      String truckModel = Input.ReadLine();
+
+      System.out.println("Ingrese el año del camión:");
+      int truckYear = Input.ReadNumber();
+
+      System.out.println("Ingrese la capacidad de carga (kg):");
+      int cargoCapacity = Input.ReadNumber();
+
+      System.out.println("Ingrese la cantidad de ejes:");
+      int axles = Input.ReadNumber();
+
+      System.out.println("Ingrese el tipo de caja (Volquete, Caja seca, etc):");
+      String bedType = Input.ReadLine();
+
+      Truck truck = new Truck(truckPrice, truckBrand, truckModel, truckYear, cargoCapacity, axles, bedType);
+      System.out.println("¿Requiere licencia especial? " + (truck.requireSpecialLicence() ? "Sí" : "No"));
+      System.out.println("Capacidades especiales: " + truck.describeSpecialCapacities());
 
     });
   }
