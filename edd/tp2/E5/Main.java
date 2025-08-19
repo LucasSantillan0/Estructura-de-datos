@@ -8,11 +8,10 @@ import edd.tp1.Common.Menu;
 public class Main {
 
   public static void main(String[] args) {
-    Menu.showMenu(new ArrayList<>() {
-      {
-        add("Ejecutar el prgrama");
-      }
-    }, (_) -> {
+    ArrayList<String> options = new ArrayList<>();
+    options.add("Ejecutar el programa");
+
+    Menu.showMenu(options, (_) -> {
 
       System.out.println("Ingrese el precio del auto:");
       float price = Float.parseFloat(Input.ReadLine());
