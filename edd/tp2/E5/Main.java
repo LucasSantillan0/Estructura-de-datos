@@ -35,8 +35,12 @@ public class Main {
       System.out.println("Ingrese el tipo de combustible (Electrico, Hibrido, Nafta, Diesel, etc):");
       String fuelType = Input.ReadLine();
 
+      System.out.println("Introduzca la fecha de fabricacion");
+      Integer manufacturingDate = Input.ReadNumber();
+
       Car car = new Car(price, brand, model, year, doors, trunkCapacity, fuelType);
       System.out.println(car.getBasicDescription());
+      System.out.println("Edad del auto" + car.getAge(manufacturingDate));
       System.out.println("¿Es un auto familiar? " + (car.isForFamilies() ? "Sí" : "No"));
       System.out.println("¿Es un auto ecológico? " + (car.isEcoFriendly() ? "Sí" : "No"));
 
