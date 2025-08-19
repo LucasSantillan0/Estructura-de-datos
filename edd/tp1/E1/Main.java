@@ -8,7 +8,6 @@ public class Main {
 
     Scanner scanner = new Scanner(System.in);
     while (true) {
-
       System.out.println("Escriba U para el conversor de unidades");
       System.out.println("Escriba T para el conversor de temperaturas");
       System.err.println("Escriba exit para salir");

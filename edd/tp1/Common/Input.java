@@ -17,6 +17,7 @@ public class Input {
 
       } catch (Exception e) {
         System.err.println("Ingrese un entero valido");
+        scanner.nextLine();
       }
     }
   }
@@ -43,4 +44,5 @@ public class Input {
       scanner.close();
     }
   }
+
 }
