@@ -1,4 +1,4 @@
-package unju.Estructura_de_datos.edd.tp3.E5;
+package edd.tp3.E5;
 
 public class StackGenerica<ELEMENT> {
 
@@ -13,7 +13,9 @@ public class StackGenerica<ELEMENT> {
 
     public void push(ELEMENT elemento) {
         if (this.isFull()) {
-            throw new RuntimeException("La pila est� llena...");
+            ELEMENT[] newArray = (ELEMENT[]) new Object[this.datos.length * 2];
+            System.arraycopy(this.datos, 0, newArray, 0, this.datos.length);
+            this.datos = newArray;
         }
         this.datos[this.cuenta] = elemento;
         ++this.cuenta;
@@ -44,6 +46,16 @@ public class StackGenerica<ELEMENT> {
 
     public int count() {
         return this.cuenta;
+    }
+
+    @Override
+    public String toString() {
+        String result = "{ ";
+        for (int i = 0; i < this.cuenta; i++) {
+            result += this.datos[i] + ", ";
+        }
+        result += "}";
+        return result;
     }
 
 }

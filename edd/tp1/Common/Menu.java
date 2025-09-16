@@ -3,6 +3,8 @@ package edd.tp1.Common;
 import java.util.ArrayList;
 import java.util.function.Consumer;
 
+import edd.common.Input;
+
 public class Menu {
   public static void showMenu(
       ArrayList<String> options, Consumer<Integer> onOptionSelected) {
