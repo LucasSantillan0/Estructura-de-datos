@@ -3,7 +3,7 @@ package edd.tp1.E5;
 import java.util.ArrayList;
 import java.util.Random;
 
-import edd.tp1.Common.Input;
+import edd.common.Input;
 import edd.tp1.Common.Menu;
 
 public class Main {

@@ -2,7 +2,7 @@ package edd.tp1.E4;
 
 import java.util.ArrayList;
 
-import edd.tp1.Common.Input;
+import edd.common.Input;
 import edd.tp1.Common.Menu;
 
 public class Main {

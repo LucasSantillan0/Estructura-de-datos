@@ -1,6 +1,6 @@
 package edd.tp1.E3;
 
-import edd.tp1.Common.Input;
+import edd.common.Input;
 
 public class Main {
 

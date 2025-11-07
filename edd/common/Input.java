@@ -1,4 +1,4 @@
-package edd.tp1.Common;
+package edd.common;
 
 import java.util.Scanner;
 
